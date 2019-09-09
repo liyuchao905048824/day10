@@ -2,6 +2,8 @@ package com.liyuchao.util;
 
 import java.util.regex.Matcher;
 
+import org.junit.Test;
+
 /**
  * 字符串工具类
  * @author zhaoming.li
@@ -57,14 +59,7 @@ public class StringUtil {
 		return result;
 	}
 	
-	/**
-	 * 判断传入的字符串是否为手机号码
-	 * @param mobile
-	 * @return
-	 */
-	public static boolean isMobileNumber(String mobile) {
-		return mobile.matches("^1[3|4|5|7|8][0-9]\\d{4,8}$");
-	}
+	
 	
 	/**
 	 * 判断输入的源字符中是否都英文字母
@@ -127,10 +122,16 @@ public class StringUtil {
 		
 		return null;
 	}
-	
+	/**
+	 * 判断传入的字符串是否为手机号码
+	 * @param mobile
+	 * @return
+	 */
+	@Test
 	public static boolean isPhone(String mobile) {
 		mobile.matches("^1[3|4|5|7|8][0-9]\\d{4,8}$");
 		if(mobile.matches(String)){
+			
 			return true;
 		}else {
 			return false;
